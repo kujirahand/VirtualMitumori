@@ -21,9 +21,11 @@ namespace VirtualMitumori
         {
             try
             {
-                double a = Double.Parse(txtA.Text);
-                double b = Double.Parse(txtB.Text);
-                double c = a * b / 2.0;
+                double a = double.Parse(txtA.Text);
+                double b = double.Parse(txtB.Text);
+                b = Math.Floor(b / 1.3);
+                double c = (a * b * 2.1) + 150;
+                c = Math.Floor(c / 10) * 10;
                 txtResult.Text = c.ToString();
             } catch {
                 txtResult.Text = "(ì¸óÕÉGÉâÅ[)";
